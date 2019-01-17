@@ -1,0 +1,441 @@
+/* GENERAL */
+
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+h1
+{
+  font-family: 'Crete Round', serif;
+  font-size: 50px;
+}
+
+h2
+{
+  font-family: 'Crete Round', serif;
+  font-size: 40px;
+}
+
+h3
+{
+  font-family: 'Crete Round', serif;
+  font-size: 25px;
+}
+
+p
+{
+  font-family: 'Lustria', serif;
+  font-size: 25px;
+  line-height: 35px;
+}
+
+a
+{
+  font-family: 'Lustria', serif;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+ul
+{
+  list-style: none;
+}
+
+.wrapper
+{
+  width: auto;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* HEADER */
+
+header .wrapper
+{
+  height: 100px;
+  padding-bottom: 20px;
+  margin-left: 50px;
+  background: url('images/logo.png') no-repeat;
+  background-size: contain;
+}
+
+header h1
+{
+  margin-top: 30px;
+  margin-left: 130px;
+  float: left;
+}
+
+/* NAVIGATION */
+
+#nav
+{
+  height: 40px;
+  width: auto;
+  background-color: black;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+
+#nav nav
+{
+  float: right;
+}
+
+#nav nav ul li
+{
+  float: left;
+  display: inline-block;
+}
+
+#nav nav ul
+{
+  margin: 10px;
+}
+
+#nav nav ul li a
+{
+  font-weight: bold;
+  margin-right: 40px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* PRODUIT */
+
+#product .wrapper
+{
+  height: 700px;
+  margin-top: 60px;
+}
+
+.product-image
+{
+  background: url('images/static-phone.png') no-repeat center;
+  background-size: contain;
+  height: 650px;
+  width: 600px;
+  float: left;
+}
+
+.product-image
+{
+  transform-origin: 50% 50%;
+  animation: 4s rotateRight infinite linear;
+}
+
+@keyframes rotateRight
+{
+  100%{transform: rotate(360deg);}
+}
+
+.product h2
+{
+  margin-left: 650px;
+}
+
+.product p
+{
+  margin-left: 650px;
+  margin-top: 20px;
+}
+
+/* FLIPPING IMAGES */
+
+#flip-image
+{
+  height: 300px;
+  /* width: 450px; */
+  margin-top: 60px;
+  position: relative;
+  margin: 10px auto;
+  z-index: 1;
+  perspective: 1000;
+  /* float: left; */
+  display: inline-block;
+}
+
+#flip-image ul
+{
+  display: flex;
+  align-items: center;
+}
+
+#flip-image ul li
+{
+  display: inline-block;
+}
+
+#flip-image .wrapper
+{
+  height: 300px;
+  /* width: 450px; */
+  /* margin-top: 60px;
+  position: relative;
+  margin: 10px auto;
+  z-index: 1;
+  perspective: 1000;
+  float: left;
+  display: inline-block; */
+}
+
+#flip-image h2
+{
+  margin: 20px auto;
+  text-align: center;
+}
+
+#flip-image p
+{
+  margin: 20px auto;
+  text-align: center;
+}
+
+.image-1
+{
+  width: 400px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+
+.image-1 .front
+{
+  background: url('images/bridge.jpg') no-repeat center;
+  background-size: contain;
+  height: 250px;
+  width: 400px;
+  /* float: left; */
+}
+
+#flip-image .wrapper:hover .image-1
+{
+  transform: rotateY(180deg);
+}
+
+.front
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back
+{
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.image-2
+{
+  width: 400px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+
+.image-2 .front
+{
+  background: url('images/boardwalk.jpg') no-repeat center;
+  background-size: contain;
+  height: 250px;
+  width: 400px;
+  /* float: left; */
+}
+
+#flip-image .wrapper:hover .image-2
+{
+  transform: rotateX(180deg);
+}
+
+.image-3
+{
+  width: 400px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+
+.image-3 .front
+{
+  background: url('images/sky.jpg') no-repeat center;
+  background-size: contain;
+  height: 250px;
+  width: 400px;
+  /* float: left; */
+}
+
+#flip-image .wrapper:hover .image-3
+{
+  transform: rotateZ(360deg);
+}
+
+/* DIAPORAMA */
+
+#diaporama h2
+{
+  margin: 20px auto;
+  text-align: center;
+}
+
+#diaporama p
+{
+  margin: 20px auto;
+  text-align: center;
+}
+
+#diaporama .wrapper
+{
+  position: relative;
+  height: 100%;
+}
+
+img
+{
+  width: 100%;
+  height: 100%;
+}
+
+*
+{
+  box-sizing: border-box;
+}
+
+.container
+{
+  position: relative;
+}
+
+.mySlides
+{
+  display: none;
+}
+
+.cursor
+{
+  cursor: pointer;
+}
+
+.prev, .next
+{
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next
+{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover
+{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext
+{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container
+{
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column
+{
+  float: left;
+  width: 16.66%;
+}
+
+.demo
+{
+  opacity: 0.6;
+}
+
+.active, .demo:hover
+{
+  opacity: 1;
+}
+
+/* FOOTER */
+
+footer .wrapper
+{
+  height: 300px;
+  background-color: black;
+  margin-top: 60px;
+}
+
+footer h1
+{
+  margin-top: 30px;
+  color: white;
+}
+
+footer p
+{
+  color: white;
+}
+
+footer .adress
+{
+  margin-left: 130px;
+  float: left;
+}
+
+footer .adress p
+{
+  margin-top: 20px;
+}
+
+footer .contacts
+{
+  float: right;
+  margin-right: 130px;
+  padding-top: 115px;
+}
+
+footer .contacts p:nth-child(2)
+{
+  margin-top: 20px;
+}

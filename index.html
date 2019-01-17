@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Lustria" rel="stylesheet">
+    <title>Animated Responsive Template</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <h1>Agency Name</h1>
+      </div>
+    </header>
+
+    <section id="nav">
+      <div class="wrapper">
+        <div class="nav">
+          <nav>
+            <ul>
+              <li>
+                <a href="">Home</a>
+              </li>
+              <li>
+                <a href="">Our Team</a>
+              </li>
+              <li>
+                <a href="">About</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section id="product">
+      <div class="wrapper">
+        <div class="product-image">
+        </div>
+        <div class="product">
+          <h2>Rotative Phone</h2>
+          <p>Made in pure CSS</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="flip-image">
+      <h2>Flipping Images</h2>
+      <p>Made in pure CSS</p>
+      <ul>
+        <li>
+          <div class="wrapper">
+            <div class="image-1">
+              <div class="front"></div>
+              <div class="back">
+                <p>
+                  This image flip from left to right.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="wrapper">
+            <div class="image-2">
+              <div class="front"></div>
+              <div class="back">
+                <p>
+                  This image flip from down to up.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="wrapper">
+            <div class="image-3">
+              <div class="front"></div>
+              <div class="back">
+                <p>
+                  This image do a 180° flip.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- <section id="diaporama">
+      <div class="wrapper">
+        <div class="diaporama">
+          <img src="images/Pano-1.jpg" class="diaporama-item">
+          <img src="images/Pano-2.jpg" class="diaporama-item">
+          <img src="images/Pano-3.jpg" class="diaporama-item">
+          <img src="images/Pano-4.jpg" class="diaporama-item">
+          <img src="images/Pano-5.jpg" class="diaporama-item">
+          <img src="images/Pano-6.jpg" class="diaporama-item">
+          <img src="images/Pano-7.jpg" class="diaporama-item">
+          <button class="button-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="button-right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="diaporama">
+      <h2>Diaporama</h2>
+      <p>Made in CSS and JavaScript</p>
+      <div class="wrapper">
+        <div class="container">
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="images/Pano-1.jpg">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="images/Pano-2.jpg">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="images/Pano-3.jpg">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="images/Pano-4.jpg">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="images/Pano-5.jpg">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="images/Pano-6.jpg">
+          </div>
+          <!-- <div class="mySlides">
+            <div class="numbertext">7 / 7</div>
+            <img src="images/Pano-7.jpg">
+          </div> -->
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="images/Pano-1.jpg" onclick="currentSlide(1)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/Pano-2.jpg" onclick="currentSlide(2)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/Pano-3.jpg" onclick="currentSlide(3)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/Pano-4.jpg" onclick="currentSlide(4)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/Pano-5.jpg" onclick="currentSlide(5)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/Pano-6.jpg" onclick="currentSlide(6)">
+            </div>
+            <!-- <div class="column">
+              <img class="demo cursor" src="images/Pano-7.jpg" onclick="currentSlide(7)">
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <div class="adress">
+          <h1>Agency Name</h1>
+          <p>Adress</p>
+        </div>
+        <div class="contacts">
+          <p>Phone number</p>
+          <p>mail@agencyname.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
