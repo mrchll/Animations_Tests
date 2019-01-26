@@ -149,13 +149,11 @@ header h1
 #flip-image
 {
   height: 300px;
-  /* width: 450px; */
   margin-top: 60px;
   position: relative;
   margin: 10px auto;
   z-index: 1;
   perspective: 1000;
-  /* float: left; */
   display: inline-block;
 }
 
@@ -173,14 +171,6 @@ header h1
 #flip-image .wrapper
 {
   height: 300px;
-  /* width: 450px; */
-  /* margin-top: 60px;
-  position: relative;
-  margin: 10px auto;
-  z-index: 1;
-  perspective: 1000;
-  float: left;
-  display: inline-block; */
 }
 
 #flip-image h2
@@ -209,7 +199,6 @@ header h1
   background-size: contain;
   height: 250px;
   width: 400px;
-  /* float: left; */
 }
 
 #flip-image .wrapper:hover .image-1
@@ -254,7 +243,6 @@ header h1
   background-size: contain;
   height: 250px;
   width: 400px;
-  /* float: left; */
 }
 
 #flip-image .wrapper:hover .image-2
@@ -276,7 +264,6 @@ header h1
   background-size: contain;
   height: 250px;
   width: 400px;
-  /* float: left; */
 }
 
 #flip-image .wrapper:hover .image-3
@@ -395,6 +382,139 @@ img
 .active, .demo:hover
 {
   opacity: 1;
+}
+
+/* MUSIC PLAYER */
+
+#music-player
+{
+  height: 200px;
+  margin-top: 50px;
+}
+
+#music-player h2
+{
+  margin: 20px auto;
+  text-align: center;
+}
+
+#music-player p
+{
+  margin: 20px auto;
+  text-align: center;
+}
+
+#music-player .wrapper
+{
+  margin: 0 auto;
+  display: table;
+}
+
+#music-player button
+{
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#myDIV {
+
+  display: none;
+}
+
+#myDIV2 {
+
+  display: none;
+}
+
+#text
+{
+  font-size: 15px;
+}
+
+/* BIRDS SHEETS */
+
+#birds
+{
+  height: auto;
+  margin-top: 60px;
+  position: relative;
+  margin: 10px auto;
+  display: inline-block;
+}
+
+#birds h2
+{
+  margin: 20px auto;
+  text-align: center;
+}
+
+#birds p
+{
+  margin: 20px auto;
+  text-align: center;
+}
+
+#birds img
+{
+  height: 200px;
+  width: 200px;
+}
+
+#birds ul
+{
+  display: flex;
+  align-items: center;
+}
+
+#birds ul li
+{
+  display: inline-block;
+}
+
+#bird-text
+{
+  display: none;
+  position: absolute;
+  height: 230px;
+  width: 400px;
+  font-size: 15px;
+  font-family: 'Lustria', serif;
+  text-align: justify;
+  float: left;
+}
+
+.bird-1:hover #bird-text
+{
+  display: inline-block;
+  position: absolute;
+}
+
+.bird-1 div
+{
+  background-color: #F0C179;
+}
+
+.bird-2:hover #bird-text
+{
+  display: inline-block;
+  position: absolute;
+}
+
+.bird-2 div
+{
+  background-color: #496C47;
+}
+
+.bird-3:hover #bird-text
+{
+  display: inline-block;
+  position: absolute;
+}
+
+.bird-3 div
+{
+  background-color: #9EA055;
 }
 
 /* FOOTER */
