@@ -20,13 +20,7 @@
           <nav>
             <ul>
               <li>
-                <a href="">Home</a>
-              </li>
-              <li>
-                <a href="">Our Team</a>
-              </li>
-              <li>
-                <a href="">About</a>
+                <a href="">This is a sticky navigation bar</a>
               </li>
             </ul>
           </nav>
@@ -34,20 +28,22 @@
       </div>
     </section>
 
-    <section id="product">
+    <section id="rotate">
       <div class="wrapper">
-        <div class="product-image">
+        <div class="rotate-image">
         </div>
-        <div class="product">
-          <h2>Rotative Phone</h2>
-          <p>Made in pure CSS</p>
+        <div class="rotate">
+          <h2>Animation 1: Rotation</h2>
+          <p>A rotative image, continuously turning 360° on itself</br>
+          Made with CSS</p>
         </div>
       </div>
     </section>
 
     <section id="flip-image">
-      <h2>Flipping Images</h2>
-      <p>Made in pure CSS</p>
+      <h2>Animation 2: Flipping Images</h2>
+      <p>Images flipping in three different ways</br>
+      Made with CSS</p>
       <ul>
         <li>
           <div class="wrapper">
@@ -88,72 +84,35 @@
       </ul>
     </section>
 
-    <section id="diaporama">
-      <h2>Diaporama</h2>
-      <p>Made in CSS and JavaScript</p>
+    <section id="diapo">
+      <h2>Animation 3: Diaporama</h2>
+      <p>A diaporama which images change randomly every 3 seconds</br>
+      Made with JavaScript</p>
       <div class="wrapper">
-        <div class="container">
-          <div class="mySlides">
-            <div class="numbertext">1 / 6</div>
-            <img src="images/Pano-1.jpg">
-          </div>
-          <div class="mySlides">
-            <div class="numbertext">2 / 6</div>
-            <img src="images/Pano-2.jpg">
-          </div>
-          <div class="mySlides">
-            <div class="numbertext">3 / 6</div>
-            <img src="images/Pano-3.jpg">
-          </div>
-          <div class="mySlides">
-            <div class="numbertext">4 / 6</div>
-            <img src="images/Pano-4.jpg">
-          </div>
-          <div class="mySlides">
-            <div class="numbertext">5 / 6</div>
-            <img src="images/Pano-5.jpg">
-          </div>
-          <div class="mySlides">
-            <div class="numbertext">6 / 6</div>
-            <img src="images/Pano-6.jpg">
-          </div>
-
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-          <div class="caption-container">
-            <p id="caption"></p>
-          </div>
-
-          <div class="row">
-            <div class="column">
-              <img class="demo cursor" src="images/Pano-1.jpg" onclick="currentSlide(1)">
-            </div>
-            <div class="column">
-              <img class="demo cursor" src="images/Pano-2.jpg" onclick="currentSlide(2)">
-            </div>
-            <div class="column">
-              <img class="demo cursor" src="images/Pano-3.jpg" onclick="currentSlide(3)">
-            </div>
-            <div class="column">
-              <img class="demo cursor" src="images/Pano-4.jpg" onclick="currentSlide(4)">
-            </div>
-            <div class="column">
-              <img class="demo cursor" src="images/Pano-5.jpg" onclick="currentSlide(5)">
-            </div>
-            <div class="column">
-              <img class="demo cursor" src="images/Pano-6.jpg" onclick="currentSlide(6)">
-            </div>
-          </div>
-        </div>
+        <article class="diapo">
+          <p>To launch the diaporama, click on the button</p>
+          <button id="diapo-on" onclick="myDiapo()">Go!</button>
+          <button id="diapo-off" onclick="stopDiapo()" >Stop!</button>
+          <img id="slideImg">
+          </img>
+        </article>
+        <!-- <div class="slides">
+          <img id="slides" src="images/pano-1.jpg">
+          <img id="slides" src="images/pano-2.jpg">
+          <img id="slides" src="images/pano-3.jpg">
+          <img id="slides" src="images/pano-4.jpg">
+          <img id="slides" src="images/pano-5.jpg">
+          <img id="slides" src="images/pano-6.jpg">
+        </div> -->
       </div>
     </section>
 
     <section id="music-player">
-      <h2>Music Player</h2>
-      <p>Made in JavaScript</p>
+      <h2>Animation 4: Music Player</h2>
+      <p>A music player appearing thanks to a button (1 second loading on purpose)</br>
+      Made with HTML and JavaScript</p>
       <div class="wrapper">
-        <button onclick="myFunction()">Click me</button>
+        <button onclick="loadMusic()">Click me</button>
 
         <div id="myDIV2">
           Loading....
@@ -170,8 +129,9 @@
     </section>
 
     <section id="birds">
-      <h2>Birds Descriptive Sheets</h2>
-      <p>Made in</p>
+      <h2>Animation 5: Zoom Image and Description Text</h2>
+      <p>Decriptive sheets appearing on hover</br>
+      Made with CSS and JavaScript</p>
       <ul>
         <li>
           <div class="wrapper">

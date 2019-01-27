@@ -1,63 +1,69 @@
 // DIAPORAMA
+var intervalPhoto;
+var slideImg;
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n)
+function changeImage()
 {
-  showSlides(slideIndex += n);
+  var random = Math.floor((Math.random() * 6) + 1);
+  var slides = 'images/pano-' + String(random) + '.jpg';
+
+  slideImg = document.getElementById('slideImg');
+  slideImg.style.display = 'block';
+
+  while (slides == slideImg.src.substr(slideImg.src.length - 17))
+  {
+    random = Math.floor((Math.random() * 6) + 1);
+    slides = 'images/pano-' + String(random) + '.jpg';
+  }
+
+  slideImg.src = slides;
 }
 
-function currentSlide(n)
+function myDiapo()
 {
-  showSlides(slideIndex = n);
+  var buttonOn = document.getElementById('diapo-on');
+  var buttonOff = document.getElementById('diapo-off');
+
+  buttonOn.style.display = 'none';
+  buttonOff.style.display = 'block';
+
+  changeImage();
+  intervalPhoto = setInterval(changeImage, 3000);
 }
 
-function showSlides(n)
+function stopDiapo()
 {
-  var i;
-  var slides = document.getElementsByClassName('mySlides');
-  var dots = document.getElementsByClassName('demo');
-  var captionText = document.getElementById('caption');
+  var buttonOn = document.getElementById('diapo-on');
+  var buttonOff = document.getElementById('diapo-off');
 
-  if (n > slides.length)
-  {
-    slideIndex = 1;
-  }
+  slideImg.style.display = 'none';
 
-  if (n < 1)
-  {
-    slideIndex = slides.length;
-  }
+  buttonOn.style.display = 'block';
+  buttonOff.style.display = 'none';
 
-  for (i = 0; i < slides.length; i++)
-  {
-    slides[i].style.display = 'none';
-  }
-
-  for (i = 0; i < dots.length; i++)
-  {
-    dots[i].className = dots[i].className.replace(' active', '');
-  }
-
-  slides[slideIndex - 1].style.display = 'block';
-  dots[slideIndex - 1].className += ' active';
-  captionText.innerHTML = dots[slideIndex - 1].alt;
+  clearInterval(intervalPhoto);
 }
 
 // MUSIC PLAYER
 
-function myFunction()
+function loadMusic()
 {
   var x = document.getElementById('myDIV');
   var y = document.getElementById('myDIV2');
+  var z = document.getElementById('text');
+
+  y.style.fontSize = '20px';
+  y.style.fontFamily = 'Lustria';
+
+  z.style.fontSize = '20px';
+  z.style.fontFamily = 'Lustria';
 
   if ((x.style.display === 'block' && y.style.display === 'block') ||
   (x.style.display === 'block' && y.style.display === 'none'))
   {
     y.style.display = 'none';
     x.style.display = 'none';
-    document.getElementById('text').innerHTML = '';
+    z.innerHTML = '';
   } else
   {
     y.style.display = 'block';
@@ -65,7 +71,7 @@ function myFunction()
     {
       x.style.display = 'block';
       y.style.display = 'none';
-      document.getElementById('text').innerHTML = 'Enjoy the music!';
+      z.innerHTML = 'Enjoy the music!';
     }, 1000);
   }
 }
