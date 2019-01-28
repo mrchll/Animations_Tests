@@ -25,7 +25,7 @@ function myDiapo()
   var buttonOff = document.getElementById('diapo-off');
 
   buttonOn.style.display = 'none';
-  buttonOff.style.display = 'block';
+  buttonOff.style.display = 'inline-block';
 
   changeImage();
   intervalPhoto = setInterval(changeImage, 3000);
@@ -38,7 +38,7 @@ function stopDiapo()
 
   slideImg.style.display = 'none';
 
-  buttonOn.style.display = 'block';
+  buttonOn.style.display = 'inline-block';
   buttonOff.style.display = 'none';
 
   clearInterval(intervalPhoto);
@@ -88,4 +88,44 @@ function normalImg(x)
 {
   x.style.height = '200px';
   x.style.width = '200px';
+}
+
+// FALLING RAIN
+
+var position;
+var xRandom;
+var randomRotation;
+
+function fallingRain()
+{
+  var rainDrop = document.getElementsByClassName('rain-drop');
+
+  for (var i = 0; i < rainDrop.length; i++)
+  {
+    xRandom = Math.floor((Math.random() * 740) + 40);
+    randomRotation = Math.floor((Math.random() * 360) + 20);
+    position = 0;
+    rainDrop[i].style.transform = 'rotate(' + randomRotation + 'deg)';
+    rainDrop[i].style.display = 'block';
+    rainDrop[i].style.left = xRandom + 'px';
+    moving(rainDrop[i]);
+  }
+}
+
+function moving(elementToMove)
+{
+  var fallingDrop = setInterval(dropFalling, 30);
+
+  function dropFalling()
+  {
+    if (position == 360)
+    {
+      clearInterval(fallingDrop);
+      elementToMove.style.display = 'none';
+      elementToMove.style.top = '0px';
+    } else {
+      position++;
+      elementToMove.style.top = position + 'px';
+    }
+  }
 }

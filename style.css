@@ -256,23 +256,23 @@ header h1
 #diapo
 {
   height: 100%;
+  width: auto;
   text-align: center;
 }
 
-#diapo .wrapper
+.diapo
 {
-  height: 400px;
-  width: 700px;
+  height: 100%;
+  width: auto;
+  text-align: center;
+  display: inline-block;
 }
 
-.slides
+.diapo p
 {
-  background: rgba(255, 255, 255, 0.95);
-  height: 400px;
-  width: 700px;
-  box-sizing: border-box;
-  position: absolute;
-  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
 }
 
 #slideImg
@@ -280,6 +280,7 @@ header h1
   display: none;
   height: 400px;
   width: 700px;
+  border-radius: 20px;
 }
 
 #diapo-off
@@ -287,12 +288,32 @@ header h1
   display: none;
 }
 
+#diapo-on, #diapo-off
+{
+  padding: 8px 8px;
+  margin: 10px auto;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-family: 'Lustria', serif;
+  font-size: 20px;
+}
+
+#diapo-on:hover, #diapo-off:hover
+{
+  background-color: black;
+  color: white;
+}
+
 /* MUSIC PLAYER */
 
 #music-player
 {
   height: 100%;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 #music-player .wrapper
@@ -407,6 +428,31 @@ header h1
 .bird-3 div
 {
   background-color: #9EA055;
+}
+
+/* FALLING RAIN */
+
+#rain
+{
+  height: 100%;
+  width: auto;
+}
+
+#rain .wrapper
+{
+  background: url('images/city-rain.jpg') no-repeat center;
+  background-size: cover;
+  height: 400px;
+  width: 800px;
+  position: relative;
+}
+
+.rain-drop
+{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  display: none;
 }
 
 /* FOOTER */
