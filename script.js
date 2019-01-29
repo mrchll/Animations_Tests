@@ -102,7 +102,7 @@ function fallingRain()
 
   for (var i = 0; i < rainDrop.length; i++)
   {
-    xRandom = Math.floor((Math.random() * 740) + 40);
+    xRandom = Math.floor((Math.random() * 745) + 40);
     randomRotation = Math.floor((Math.random() * 360) + 20);
     position = 0;
     rainDrop[i].style.transform = 'rotate(' + randomRotation + 'deg)';
@@ -128,4 +128,24 @@ function moving(elementToMove)
       elementToMove.style.top = position + 'px';
     }
   }
+}
+
+// HIGHLIGHT TEXT
+
+var paragraph;
+var innerHTML;
+
+function highlightText(text)
+{
+  paragraph = document.getElementById('highlight-phrase');
+  paragraph.style.backgroundColor = '#B22222';
+  paragraph.style.transition = '2s';
+  paragraph.style.color = 'white';
+}
+
+function normalText()
+{
+  paragraph.style.backgroundColor = 'transparent';
+  paragraph.style.transition = '';
+  paragraph.style.color = 'black';
 }

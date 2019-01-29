@@ -104,7 +104,7 @@
       <p>A music player appearing thanks to a button (1 second loading on purpose)</br>
       Made with HTML and JavaScript</p>
       <div class="wrapper">
-        <button onclick="loadMusic()">Click me</button>
+        <button onclick="loadMusic()">Try me!</button>
 
         <div id="myDIV2">
           Loading....
@@ -160,8 +160,10 @@
 
     <section id="rain">
       <h2>Animation 6: Falling Rain</h2>
-      <p>Made with</p>
-      <button onclick="fallingRain()">Make it Rain !</button>
+      <p>A nice "rain" falling on New York City (Hi, Wall Street!)</br>
+      Position and rotation of the "drops" randomly programed</br>
+      Made with JavaScript</p>
+      <button id="make-rain" onclick="fallingRain()">Make it Rain!</button>
       <div id='imagecontaine' class="wrapper">
         <img class="rain-drop" src='images/money.png'/>
         <img class="rain-drop" src='images/money.png'/>
@@ -191,16 +193,19 @@
       </div>
     </section>
 
+    <section id="highlight">
+      <h2>Animation 7: Highlight Text</h2>
+      <p>Highlight text on hover</br>
+      Made with JavaScript</p>
+      <div class="wrapper">
+        <p id="highlight-text" onmouseover="highlightText(this)" onmouseout="normalText()"><span id="highlight-phrase">Lorem ipsum dolor sit amet, et eum putant epicurei, vidisse labitur vel ea.</span> Vim an vide recteque eloquentiam, nostrum accusamus nec ad. Id duo nonumes percipitur necessitatibus, vis in posse iudico feugiat. Qualisque neglegentur pri ea, et reque adversarium eum. Qui at affert persecuti mediocritatem.</br>
+        Pri noster urbanitas eu, duo dicunt inimicus at. Vim possim virtute id, bonorum efficiantur in pro, ex inani animal vix. Malorum percipitur est no, sit ut tation conclusionemque, at vis civibus omittantur. Nec ut euismod accusata recteque, epicuri molestiae reprimique ut his. Ius fuisset mnesarchum ex.</p>
+      </div>
+    </section>
+
     <footer>
       <div class="wrapper">
-        <div class="adress">
-          <h1>Animations Tests</h1>
-          <p>Adress</p>
-        </div>
-        <div class="contacts">
-          <p>Phone number</p>
-          <p>mail@animationstests.com</p>
-        </div>
+        <h1>Thanks for visiting!</h1>
       </div>
     </footer>
   </body>
