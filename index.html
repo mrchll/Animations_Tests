@@ -198,8 +198,66 @@
       <p>Highlight text on hover</br>
       Made with JavaScript</p>
       <div class="wrapper">
-        <p id="highlight-text" onmouseover="highlightText(this)" onmouseout="normalText()"><span id="highlight-phrase">Lorem ipsum dolor sit amet, et eum putant epicurei, vidisse labitur vel ea.</span> Vim an vide recteque eloquentiam, nostrum accusamus nec ad. Id duo nonumes percipitur necessitatibus, vis in posse iudico feugiat. Qualisque neglegentur pri ea, et reque adversarium eum. Qui at affert persecuti mediocritatem.</br>
+        <p id="highlight-text" onmouseover="highlightText()" onmouseout="normalText()"><span id="highlight-phrase">Lorem ipsum dolor sit amet, et eum putant epicurei, vidisse labitur vel ea.</span> Vim an vide recteque eloquentiam, nostrum accusamus nec ad. Id duo nonumes percipitur necessitatibus, vis in posse iudico feugiat. Qualisque neglegentur pri ea, et reque adversarium eum. Qui at affert persecuti mediocritatem.</br>
         Pri noster urbanitas eu, duo dicunt inimicus at. Vim possim virtute id, bonorum efficiantur in pro, ex inani animal vix. Malorum percipitur est no, sit ut tation conclusionemque, at vis civibus omittantur. Nec ut euismod accusata recteque, epicuri molestiae reprimique ut his. Ius fuisset mnesarchum ex.</p>
+      </div>
+    </section>
+
+    <section id="tictactoe">
+      <h2>Animation 8: Tic-Tac-Toe Game</h2>
+      <p>Made with JavaScript</p>
+      <div class="wrapper">
+        <img id="x-player" src="images/x-player.svg" style="opacity: 1">
+        <img id="o-player" src="images/o-player.svg">
+        <table id="gametable">
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <td id="1-1" onclick="playGame(this)">
+              <img id="1-1x" class="x-player" src="images/x-player.svg" style="display: none">
+              <img id="1-1o" class="o-player" src="images/o-player.svg" style="display: none">
+            </td>
+            <td id="1-2" onclick="playGame(this)">
+              <img id="1-2x" class="x-player" src="images/x-player.svg" style="display: none">
+              <img id="1-2o" class="o-player" src="images/o-player.svg" style="display: none">
+            </td>
+            <td id="1-3" onclick="playGame(this)">
+              <img id="1-3x" class="x-player" src="images/x-player.svg" style="display: none">
+              <img id="1-3o" class="o-player" src="images/o-player.svg" style="display: none">
+            </td>
+          </tr>
+          <tr>
+            <td id="2-1" onclick="playGame(this)">
+              <img id="2-1x" class="x-player" src="images/x-player.svg" style="display: none">
+              <img id="2-1o" class="o-player" src="images/o-player.svg" style="display: none">
+            </td>
+            <td id="2-2" onclick="playGame(this)">
+              <img id="2-2x" class="x-player" src="images/x-player.svg" style="display: none">
+              <img id="2-2o" class="o-player" src="images/o-player.svg" style="display: none">
+            </td>
+            <td id="2-3" onclick="playGame(this)">
+              <img id="2-3x" class="x-player" src="images/x-player.svg" style="display: none">
+              <img id="2-3o" class="o-player" src="images/o-player.svg" style="display: none">
+            </td>
+          </tr>
+          <tr>
+            <td id="3-1" onclick="playGame(this)">
+              <img id="3-1x" class="x-player" src="images/x-player.svg" style="display: none">
+              <img id="3-1o" class="o-player" src="images/o-player.svg" style="display: none">
+            </td>
+            <td id="3-2" onclick="playGame(this)">
+              <img id="3-2x" class="x-player" src="images/x-player.svg" style="display: none">
+              <img id="3-2o" class="o-player" src="images/o-player.svg" style="display: none">
+            </td>
+            <td id="3-3" onclick="playGame(this)">
+              <img id="3-3x" class="x-player" src="images/x-player.svg" style="display: none">
+              <img id="3-3o" class="o-player" src="images/o-player.svg" style="display: none">
+            </td>
+          </tr>
+        </table>
       </div>
     </section>
 

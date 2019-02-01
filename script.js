@@ -95,6 +95,7 @@ function normalImg(x)
 var position;
 var xRandom;
 var randomRotation;
+var jackpotWin;
 
 function fallingRain()
 {
@@ -109,6 +110,9 @@ function fallingRain()
     rainDrop[i].style.display = 'block';
     rainDrop[i].style.left = xRandom + 'px';
     moving(rainDrop[i]);
+
+    jackpotWin = new Audio('images/cash-register.mp3');
+    jackpotWin.play();
   }
 }
 
@@ -135,7 +139,7 @@ function moving(elementToMove)
 var paragraph;
 var innerHTML;
 
-function highlightText(text)
+function highlightText()
 {
   paragraph = document.getElementById('highlight-phrase');
   paragraph.style.backgroundColor = '#B22222';
@@ -148,4 +152,98 @@ function normalText()
   paragraph.style.backgroundColor = 'transparent';
   paragraph.style.transition = '';
   paragraph.style.color = 'black';
+}
+
+// TIC TAC TOE
+
+var playerOne;
+var playerTwo;
+var allLines;
+
+function playGame(selectedCase)
+{
+  playerOne = document.getElementById('x-player');
+  playerTwo = document.getElementById('o-player');
+
+  var gameCaseX = selectedCase.getElementsByClassName('x-player')[0];
+  var gameCaseO = selectedCase.getElementsByClassName('o-player')[0];
+
+  if (playerOne.style.opacity == '1') {
+    gameCaseX.style.display = 'block';
+    selectedCase.onclick = 'return false';
+  } else {
+    gameCaseO.style.display = 'block';
+    selectedCase.onclick = 'return false';
+  }
+
+  defineWinner('x');
+  defineWinner('o');
+  changeGamer();
+}
+
+function changeGamer()
+{
+  if (playerOne.style.opacity == '1')
+  {
+    playerOne.style.opacity = '0.3';
+    playerTwo.style.opacity = '1';
+  } else {
+    playerTwo.style.opacity = '0.3';
+    playerOne.style.opacity = '1';
+  }
+}
+
+function defineWinner(who)
+{
+  for (var i = 1; i < 4; i++)
+  {
+    a = document.getElementById(i + '-1' + who).style.display;
+    b = document.getElementById(i + '-2' + who).style.display;
+    c = document.getElementById(i + '-3' + who).style.display;
+    x = document.getElementById('1-' + i + who).style.display;
+    y = document.getElementById('2-' + i + who).style.display;
+    z = document.getElementById('3-' + i + who).style.display;
+
+    if ((a == 'block') && (b == 'block') && (c == 'block')) {
+      freezeGame();
+      winGame();
+      break;
+    } else if ((x == 'block') && (y == 'block') && (z == 'block')) {
+      freezeGame();
+      winGame();
+      break;
+    }
+  }
+
+  d = document.getElementById('1-1' + who).style.display;
+  e =  document.getElementById('2-2' + who).style.display;
+  f =  document.getElementById('3-3' + who).style.display;
+  g = document.getElementById('1-3' + who).style.display;
+  h =  document.getElementById('3-1' + who).style.display;
+
+  if ((d == 'block') && (e == 'block') && (f == 'block')) {
+    freezeGame();
+    winGame();
+  } else if ((g == 'block') && (e == 'block') && (h == 'block')) {
+    freezeGame();
+    winGame();
+  }
+}
+
+function freezeGame() {
+  allLines = document.getElementsByTagName('TD');
+
+  for (var i = 0; i < allLines.length; i++)
+  {
+    allLines[i].onclick = 'return false';
+  }
+}
+
+function winGame()
+{
+  var winWindow = document.createElement('DIV');
+  var winText = document.createTextNode('CONGRATULATION! YOU WIN!');
+
+  winWindow.appendChild(winText);
+  document.body.appendChild(winWindow);
 }
