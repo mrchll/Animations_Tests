@@ -159,14 +159,19 @@ function normalText()
 var playerOne;
 var playerTwo;
 var allLines;
+var gameTable;
+var gameCaseX;
+var gameCaseO;
+var turnCount = 0;
+var winOrLoseWindow;
 
 function playGame(selectedCase)
 {
   playerOne = document.getElementById('x-player');
   playerTwo = document.getElementById('o-player');
 
-  var gameCaseX = selectedCase.getElementsByClassName('x-player')[0];
-  var gameCaseO = selectedCase.getElementsByClassName('o-player')[0];
+  gameCaseX = selectedCase.getElementsByClassName('x-player')[0];
+  gameCaseO = selectedCase.getElementsByClassName('o-player')[0];
 
   if (playerOne.style.opacity == '1') {
     gameCaseX.style.display = 'block';
@@ -178,6 +183,12 @@ function playGame(selectedCase)
 
   defineWinner('x');
   defineWinner('o');
+  turnCount++;
+
+  if (turnCount == 9) {
+    loseGame();
+  }
+
   changeGamer();
 }
 
@@ -207,10 +218,12 @@ function defineWinner(who)
     if ((a == 'block') && (b == 'block') && (c == 'block')) {
       freezeGame();
       winGame();
+      turnCount = 0;
       break;
     } else if ((x == 'block') && (y == 'block') && (z == 'block')) {
       freezeGame();
       winGame();
+      turnCount = 0;
       break;
     }
   }
@@ -224,9 +237,12 @@ function defineWinner(who)
   if ((d == 'block') && (e == 'block') && (f == 'block')) {
     freezeGame();
     winGame();
+    turnCount = 0;
+    return true;
   } else if ((g == 'block') && (e == 'block') && (h == 'block')) {
     freezeGame();
     winGame();
+    turnCount = 0;
   }
 }
 
@@ -241,9 +257,61 @@ function freezeGame() {
 
 function winGame()
 {
-  var winWindow = document.createElement('DIV');
-  var winText = document.createTextNode('CONGRATULATION! YOU WIN!');
+  winOrLoseWindow = document.getElementById('win-window');
 
-  winWindow.appendChild(winText);
-  document.body.appendChild(winWindow);
+  gameTable = document.getElementById('gametable');
+
+  winOrLoseWindow.style.display = 'block';
+  gameTable.style.opacity = '0.3';
 }
+
+function loseGame()
+{
+  winOrLoseWindow = document.getElementById('lose-window');
+
+  gameTable = document.getElementById('gametable');
+
+  winOrLoseWindow.style.display = 'block';
+  gameTable.style.opacity = '0.3';
+}
+
+function restartGame()
+{
+  allLines = document.getElementsByTagName('TD');
+
+  for (var i = 0; i < allLines.length; i++)
+  {
+    allLines[i].onclick = 'playGame(this)';
+    console.log(allLines[i].onclick);
+  }
+
+  var allX = document.getElementsByClassName('x-player');
+  var allO = document.getElementsByClassName('o-player');
+
+  for (var ii = 0; ii < allX.length; ii++)
+  {
+    allX[ii].style.display = 'none';
+  }
+
+  for (var yy = 0; yy < allO.length; yy++)
+  {
+    allO[yy].style.display = 'none';
+  }
+
+  turnCount = 0;
+  playerOne.style.opacity = '1';
+  playerTwo.style.opacity = '0.3';
+
+  gameTable.style.opacity = '1';
+  winOrLoseWindow.style.display = 'none';
+}
+
+// function returnDisplay(id) {
+//   var x = document.getElementById(id);
+//   var y = x.style.display;
+//   if (y == 'none') {
+//     return false;
+//   }else {
+//     return true;
+//   }
+// }
