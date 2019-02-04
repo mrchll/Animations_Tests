@@ -175,10 +175,10 @@ function playGame(selectedCase)
 
   if (playerOne.style.opacity == '1') {
     gameCaseX.style.display = 'block';
-    selectedCase.onclick = 'return false';
+    selectedCase.style.pointerEvents = 'none';
   } else {
     gameCaseO.style.display = 'block';
-    selectedCase.onclick = 'return false';
+    selectedCase.style.pointerEvents = 'none';
   }
 
   defineWinner('x');
@@ -251,14 +251,13 @@ function freezeGame() {
 
   for (var i = 0; i < allLines.length; i++)
   {
-    allLines[i].onclick = 'return false';
+    allLines[i].style.pointerEvents = 'none';
   }
 }
 
 function winGame()
 {
   winOrLoseWindow = document.getElementById('win-window');
-
   gameTable = document.getElementById('gametable');
 
   winOrLoseWindow.style.display = 'block';
@@ -268,7 +267,6 @@ function winGame()
 function loseGame()
 {
   winOrLoseWindow = document.getElementById('lose-window');
-
   gameTable = document.getElementById('gametable');
 
   winOrLoseWindow.style.display = 'block';
@@ -281,8 +279,7 @@ function restartGame()
 
   for (var i = 0; i < allLines.length; i++)
   {
-    allLines[i].onclick = 'playGame(this)';
-    console.log(allLines[i].onclick);
+    allLines[i].style.pointerEvents = 'auto';
   }
 
   var allX = document.getElementsByClassName('x-player');
