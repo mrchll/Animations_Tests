@@ -358,21 +358,9 @@ header h1
 {
   height: 100%;
   margin-top: 60px;
-  position: relative;
   margin: 10px auto;
 }
 
-#birds .wrapper
-{
-  margin: 20px auto;
-  height: 100%;
-}
-
-#birds img
-{
-  height: 200px;
-  width: 200px;
-}
 
 #birds ul
 {
@@ -386,48 +374,32 @@ header h1
   height: 100%;
 }
 
-#bird-text
+#birds .wrapper
 {
-  display: none;
+  margin: 20px auto;
+  height: 100%;
+}
+
+#bird-1, #bird-2, #bird-3
+{
+  position: relative;
+  text-align: center;
+  height: 100%;
+}
+
+#image-1, #image-2, #image-3
+{
+  height: 200px;
+  width: 200px;
+}
+
+.bird-text
+{
   position: absolute;
   height: 230px;
   width: 400px;
-  font-size: 15px;
-  font-family: 'Lustria', serif;
+  font-size: 20px;
   text-align: justify;
-}
-
-.bird-1:hover #bird-text
-{
-  display: inline-block;
-  position: absolute;
-}
-
-.bird-1 div
-{
-  background-color: #F0C179;
-}
-
-.bird-2:hover #bird-text
-{
-  display: inline-block;
-  position: absolute;
-}
-
-.bird-2 div
-{
-  background-color: #496C47;
-}
-
-.bird-3:hover #bird-text
-{
-  display: inline-block;
-  position: absolute;
-}
-
-.bird-3 div
-{
-  background-color: #9EA055;
 }
 
 /* FALLING RAIN */

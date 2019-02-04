@@ -78,16 +78,29 @@ function loadMusic()
 
 // BIRDS SHEETS
 
+var birdText;
+var birdImg;
+
 function bigImg(x)
 {
-  x.style.height = '400px';
-  x.style.width = '400px';
+  birdImg = x.getElementsByTagName('IMG')[0];
+  birdText = x.getElementsByClassName('bird-text')[0];
+
+  birdImg.style.height = '400px';
+  birdImg.style.width = '400px';
+  birdImg.style.opacity = '0.3';
+  birdText.style.display = 'block';
 }
 
 function normalImg(x)
 {
-  x.style.height = '200px';
-  x.style.width = '200px';
+  birdImg = x.getElementsByTagName('IMG')[0];
+  birdText = x.getElementsByClassName('bird-text')[0];
+
+  birdImg.style.height = '200px';
+  birdImg.style.width = '200px';
+  birdImg.style.opacity = '1';
+  birdText.style.display = 'none';
 }
 
 // FALLING RAIN
