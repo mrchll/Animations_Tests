@@ -569,6 +569,55 @@ td
   font-size: 20px;
 }
 
+/* MEMORY CARD GAME */
+
+#memory-cards
+{
+  height: 100%;
+  width: auto;
+}
+
+#memory-cards .wrapper
+{
+  text-align: center;
+}
+
+#memory-cards ul
+{
+  align-items: center;
+}
+
+#memory-cards ul li
+{
+  display: inline-block;
+  margin: 5px;
+}
+
+.card-game
+{
+  height: 300px;
+  width: 170px;
+  display: inline-block;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+
+.front-card
+{
+  height: 300px;
+  width: 170px;
+  display: inline-block;
+  backface-visibility: hidden;
+}
+
+.back-card
+{
+  height: 300px;
+  width: 170px;
+  display: inline-block;
+  backface-visibility: hidden;
+}
+
 /* FOOTER */
 
 footer .wrapper

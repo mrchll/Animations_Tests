@@ -325,3 +325,25 @@ function restartGame()
 //     return true;
 //   }
 // }
+
+// MEMORY CARD GAME
+
+var frontCard;
+var backCard;
+var listCards = [1, 1, 2, 2, 3, 3, 4, 4];
+
+function cardGame(card)
+{
+  var randomCard = Math.floor(Math.random() * listCards.length);
+  var cards = 'images/card-' + String(listCards[randomCard]) + '.png';
+
+  frontCard = card.getElementsByClassName('front-card')[0];
+  frontCard.src = cards;
+  frontCard.style.display = 'block';
+
+  backCard = card.getElementsByClassName('back-card')[0];
+  backCard.style.display = 'none';
+  card.style.pointerEvents = 'none';
+
+  listCards.splice(randomCard, 1);
+}
